@@ -4,10 +4,14 @@ Chapter: <input id="chN" type="text"><br>
 
 <script>
 function reDir() {
-    if (document.getElementById('chN').value.length == 1) {
-        window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-0" + document.getElementById('chN').value + ".pdf";
+    if (Number(document.getElementById('chN').value) >= 36 || Number(document.getElementById('chN').value) <= 0) {
+        alert('The chapter you entered - "' + document.getElementById('chN').value + '" - is invalid. This may be because it is not a number, or is not a chapter in the book.');
     } else {
-        window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-" + document.getElementById('chN').value + ".pdf";
+        if (document.getElementById('chN').value.length == 1) {
+            window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-0" + document.getElementById('chN').value + ".pdf";
+        } else {
+            window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-" + document.getElementById('chN').value + ".pdf";
+        }
     }
 }
 </script>
