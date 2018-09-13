@@ -4,7 +4,7 @@ Chapter: <input id="chN" type="text"><br>
 
 <script>
 function reDir() {
-    if (Number(document.getElementById('chN').value) >= 36 || Number(document.getElementById('chN').value) <= 0) {
+    if (Number(document.getElementById('chN').value) >= 36 || Number(document.getElementById('chN').value) <= 0 || isNaN(document.getElementById('chN').value)) {
         alert('The chapter you entered - "' + document.getElementById('chN').value + '" - is invalid. This may be because it is not a number, or is not a chapter in the book.');
     } else {
         if (document.getElementById('chN').value.length == 1) {
