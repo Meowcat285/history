@@ -8,7 +8,7 @@ function reDir() {
         alert('The chapter you entered - "' + document.getElementById('chN').value + '" - is invalid. This may be because it is not a number, or is not a chapter in the book.');
     } else {
         if (document.getElementById('chN').value == '21') {
-            alert('ha ha 21');
+            alert('ha ha 21\n\n(pressing OK loads chapter 21)');
         }
         if (document.getElementById('chN').value.length == 1) {
             window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-0" + document.getElementById('chN').value + ".pdf";
