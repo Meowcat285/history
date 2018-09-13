@@ -1,8 +1,13 @@
+<br>
 Chapter: <input id="chN" type="text"><br>
 <button onclick="reDir()">Load chapter</button>
 
 <script>
 function reDir() {
-    window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-" + document.getElementById('chN').value + ".pdf";
+    if (document.getElementById('chN').value.length == 1) {
+        window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-0" + document.getElementById('chN').value + ".pdf";
+    } else {
+        window.location.href = "http://blogs.4j.lane.edu/cylibrary/files/2013/11/HA-Chapter-" + document.getElementById('chN').value + ".pdf";
+    }
 }
 </script>
